@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WIP</title>
+	{% load staticfiles %}
+	<link rel='stylesheet' href="{% static 'main.css' %}">
+	<script type="text/javascript" src="{% static 'Javascript/main.js' %}"></script>
+</head>
+
+<body onload="adaptToSize()">
+	<nav id="menu">
+		<ul>
+			<a href="{% url 'index' %}"><li class="logo">
+				<span>W</span>
+			</li></a>
+			<a href="{% url 'listOfEvents' %}"><li>
+				<span class="tab">Events</span>
+				<img src="{% static 'Images/calendar.png' %}" class="icon">
+			</li></a>
+			<a href="discover.html"><li>
+				<span class="tab">Discover</span>
+				<img src="{% static 'Images/discover.png' %}" class="icon">
+			</li></a>
+			<a href="{% url 'addNewEvent' %}"><li>
+				<span class="tab">Add</span>
+				<img src="{% static 'Images/add.png' %}" class="icon">
+			</li></a>
+			<a href="{% url 'settings' %}"><li>
+				<span class="tab">Settings</span>
+				<img src="{% static 'Images/settings.png' %}" class="icon">
+			</li></a>
+		</ul>
+	</nav>
+	<div id="clear-header"><p>Events</p></div>
+
+	<div class="greeting"><h1>Hello, Raghav</h1></div>
+	
+	<div class="container">
+		<div class="card">
+			{% block content %}
+ 		 <ul class="object-tools">
+	            <li>
+	                <a href={{ previous_month }}>
+	                    Previous month
+	                </a>
+	            </li>
+	            <li>
+	                <a href={{ next_month }}>
+	                    Next month
+	                </a>
+	            </li>
+        	</ul>
+			{{ calendar }}
+			{% endblock %}
+		</div>
+	</div>
+
+</body>
+</html>

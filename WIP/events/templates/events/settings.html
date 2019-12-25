@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WIP</title>
+	{% load staticfiles %}
+	<link rel='stylesheet' href="{% static 'main.css' %}">
+	<script type="text/javascript" src="{% static 'Javascript/main.js' %}"></script>
+</head>
+
+<body onload="adaptToSize()">
+	<nav id="menu">
+		<ul>
+			<a href="{% url 'index' %}"><li class="logo">
+				<span>W</span>
+			</li></a>
+			<a href="{% url 'listOfEvents' %}"><li>
+				<span class="tab">Events</span>
+				<img src="{% static 'Images/calendar.png' %}" class="icon">
+			</li></a>
+			<a href="discover.html"><li>
+				<span class="tab">Discover</span>
+				<img src="{% static 'Images/discover.png' %}" class="icon">
+			</li></a>
+			<a href="{% url 'addNewEvent' %}"><li>
+				<span class="tab">Add</span>
+				<img src="{% static 'Images/add.png' %}" class="icon">
+			</li></a>
+			<a href="{% url 'settings' %}"><li>
+				<span class="tab">Settings</span>
+				<img src="{% static 'Images/settings-active.png' %}" class="icon">
+			</li></a>
+		</ul>
+	</nav>
+	<div id="clear-header"><p>Home</p></div>
+
+	<div class="greeting"><h1>Hello, Raghav</h1></div>
+	
+	<div class="container">
+		<div class="card">
+			<h2>Select Themes</h2>
+			<span>The Light Side or The Dark Side</span>
+			<button onclick="lightTheme();">Light Theme</button>
+			<button onclick="darkTheme();">Dark Theme</button>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		function lightTheme() {
+  			document.body.style.backgroundImage = "url({% static 'Images/background2.png' %})";
+  			document.nav.style.backgroundImage = "url({% static 'Images/header2.png' %})";
+  			document.getElementById('clear-header').style.backgroundImage = "url({% static 'Images/header2.png' %})";
+		}
+
+		function darkTheme() {
+  			document.body.style.backgroundImage = "url({% static 'Images/background.png' %})";
+  			document.nav.style.backgroundImage = "url({% static 'Images/header.png' %})";
+  			document.getElementById('clear-header').style.backgroundImage = "url({% static 'Images/header.png' %})";
+		}
+	</script>
+
+</body>
+</html>

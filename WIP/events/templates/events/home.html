@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WIP</title>
+	{% load staticfiles %}
+	<link rel='stylesheet' href="{% static 'main.css' %}">
+	<script type="text/javascript" src="{% static 'Javascript/main.js' %}"></script>
+</head>
+
+<body onload="adaptToSize()">
+	<nav id="menu">
+		<ul>
+			<a href="{% url 'index' %}"><li class="logo">
+				<span>W</span>
+			</li></a>
+			<a href="{% url 'listOfEvents' %}"><li>
+				<span class="tab">Events</span>
+				<img src="{% static 'Images/calendar.png' %}" class="icon">
+			</li></a>
+			<a href="discover.html"><li>
+				<span class="tab">Discover</span>
+				<img src="{% static 'Images/discover.png' %}" class="icon">
+			</li></a>
+			<a href="{% url 'addNewEvent' %}"><li>
+				<span class="tab">Add</span>
+				<img src="{% static 'Images/add.png' %}" class="icon">
+			</li></a>
+			<a href="{% url 'settings' %}"><li>
+				<span class="tab">Settings</span>
+				<img src="{% static 'Images/settings.png' %}" class="icon">
+			</li></a>
+			<a href="{% url 'logout' %}"><li>Logout</li></a>
+		</ul>
+	</nav>
+	<div id="clear-header"><p>Home</p></div>
+
+	<div class="greeting"><h1>Hello, Raghav</h1></div>
+	
+	<div class="container">
+		<div class="card">
+			<h2>Upcoming Deadlines</h2>
+			<span>Assignments coming to haunt you</span>
+			<ul id="deadlines">
+				{% for event in deadlines %}
+				<li>{{ event.eventName }}, <span style="font-style: italic;">{{event.description}}</span></li>
+				{% endfor %}
+			</ul>
+		</div>
+
+		<div class="card">
+			<h2>Events for the Day</h2>
+			<span>Too little too late</span>
+			<ul id="dayEvents">
+				{% for event in dayEvents %}
+				<li>{{ event.eventName }}, <span style="font-style: italic;">{{event.description}}</span></li>
+				{% endfor %}
+			</ul>
+		</div>
+
+		<div class="card">
+			<h2>Forthcoming Examinations</h2>
+			<span>Impending Doom</span>
+			<ul id="forthcomingExams">
+				{% for event in exams %}
+				<li>{{ event.eventName }}, <span style="font-style: italic;">{{event.description}}</span></li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,283 @@
+@media (max-width: 834px) 
+{ /*breakpoint*/
+  .container {
+  	flex-direction: column;
+  	grid-template-columns: none;
+  }
+}
+
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0;
+	font-family: Roboto, Helvetica Neue, sans-serif;
+	background-image: url(Images/background.png);
+	background-attachment: fixed;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+}
+
+form {
+	color: white;
+	margin: 0 auto;
+	background-position: bottom;
+	border-radius: 10px;
+	display: inline-block;
+	width: auto;
+	padding: 10px;
+	text-align: center;
+	grid-template-columns: 1fr 1fr;
+}
+
+input, #id_dateActive {
+	background: transparent;
+	height: 30px;
+	color: white;
+	outline: 0;
+	border: 0;
+	border-bottom: solid white 1px;
+	margin-bottom: 25px;
+	font-size: 1.1em;
+	width: 225px;
+	font-weight: 200;
+}
+
+input:focus, #id_dateActive:focus {
+	border-bottom: solid #f39c12 1px;
+}
+
+.input-group-text {
+	background: transparent;
+	border: none;
+}
+
+select {
+	background: transparent;
+	height: 30px;
+	color: white;
+	outline: 0;
+	border: 0;
+	margin-bottom: 25px;
+	font-size: 1.1em;
+	width: 225px;
+	font-weight: 200;
+}
+
+#submit, button {
+	background-color: #ecf0f1;
+	color: black;
+	height: 35px;
+	border-radius: 5px;
+	outline: 0;
+	border: 0;
+	font-weight: 200;
+	width: 225px;
+	font-size: 1em;
+}
+
+#submit:hover, button:hover {
+	background-color: #f39c12;
+	color: white;
+	transition: 0.5s;
+}
+
+a {
+	text-decoration: none;
+}
+
+nav {
+	width: 100%;
+	position: fixed;
+	box-sizing: border-box;
+	padding-top: 4px;
+	background-image: url(Images/header.png);
+	background-position: bottom;
+	z-index: 1;
+}
+
+nav ul {
+	list-style-type: none;
+	width: 90%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 0;
+	margin: 5px auto;
+}
+
+nav li {
+	margin: 0 auto;
+	padding: 5px;
+    text-align: center;
+    list-style-type: none;
+}
+
+nav ul a {
+	color: white;
+	display: inline-block;
+	font-size: 1.3em;
+	font-weight: 300;
+}
+
+nav ul a:hover {
+	color: #f1c40f;
+	transition: 0.5s;
+}
+
+.logo {
+	color: #f1c40f;
+}
+
+.active {
+	color: #f1c40f;
+}
+
+#clear-header {
+	height: 50px;
+	width: 100%;
+	color: white;
+	padding-top: 5px;
+	visibility: hidden;
+	text-align: center;
+	font-size: 1.4em;
+	top: 0;
+	background-image: url(Images/header.png);
+	background-position: top;
+	position: -webkit-sticky;
+}
+
+#clear-header p {
+	margin-top: 5px;
+}
+
+.icon {
+	height: 30px;
+	width: 30px;
+	display: none;
+}
+
+.container {
+	width: 100%;
+	min-height: 100%;
+	height: auto;
+	overflow: scroll;
+	padding-bottom: 100px;
+	margin: 0 auto;
+	color: white;
+	display: inline-grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	flex-basis: 0;
+	flex: 1 1 0px;
+}
+
+.greeting {
+	width: 100%;
+	height: 30px;
+	margin-top: 20px;
+	margin-bottom: 50px;
+	padding-left: 40px;
+	color: white;
+}
+
+.greeting h1 {
+	margin: 15px auto;
+	font-size: 1.6em;
+}
+
+.card {
+	text-align: left;
+	max-width: 300px;
+	max-height: 500px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	cursor: pointer;
+	overflow: scroll;
+	margin-bottom: 30px;
+}
+
+.card_event {
+	text-align: left;
+	max-width: 300px;
+	max-height: 500px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	cursor: pointer;
+	overflow: scroll;
+	margin-bottom: 30px;
+}
+
+.container h2 {
+	margin: 0 auto;
+	font-weight: 300;
+}
+
+.card span {
+	font-style: italic;
+	font-size: 0.9em;
+	font-weight: 200;
+}
+
+.card_event span {
+	font-style: italic;
+	font-size: 0.9em;
+	font-weight: 200;
+}
+
+.card ul {
+	list-style-type: disc;
+	font-size: 0.9em;
+	padding-left: 20px;
+	margin: 0 auto;
+	margin-top: 15px;
+}
+
+.card_event ul {
+	list-style-type: none;
+	font-size: 0.9em;
+	margin: 0 auto;
+	margin-top: 15px;
+	padding-inline-start: 0; 
+}
+
+.card li {
+	margin-bottom: 5px;
+}
+
+.card_event li {
+	margin-bottom: 5px;
+}
+
+.card a {
+	color: white;
+}
+
+.WIP {
+	color: white;
+	font-family: "ADAM.CG PRO", "Futura";
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+
+.WIP h1 {
+	font-weight: 200;
+	font-size: 3em;
+	margin-bottom: 25px;
+	margin-top: 20px;
+	text-shadow: 3px 3px #f39c12;
+}
+
+.addEvent {
+	margin-top: 20px;
+}
+
+.addEvent h2 {
+	margin-bottom: 30px;
+}
